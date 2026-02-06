@@ -5,7 +5,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/bootstrap-unit
     decorate: true
     labels:
@@ -1456,7 +1456,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-azure
     decorate: true
     labels:
@@ -1529,7 +1529,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-azure-ovn-upgrade
     decorate: true
     labels:
@@ -1602,7 +1602,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-azure-ovn-upgrade-out-of-change
     decorate: true
     labels:
@@ -1675,7 +1675,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-azure-upgrade
     decorate: true
     labels:
@@ -2059,6 +2059,7 @@ presubmits:
       ci.openshift.io/generator: prowgen
       pj-rehearse.openshift.io/can-be-rehearsed: "true"
     name: pull-ci-openshift-machine-config-operator-release-4.20-e2e-gcp-op-ocl
+    optional: true
     rerun_command: /test e2e-gcp-op-ocl
     skip_if_only_changed: ^docs/|\.md$|^(?:.*/)?(?:\.gitignore|OWNERS|OWNERS_ALIASES|LICENSE)$
     spec:
@@ -2634,12 +2635,12 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-hypershift
     decorate: true
     labels:
-      ci-operator.openshift.io/cloud: hypershift
-      ci-operator.openshift.io/cloud-cluster-profile: hypershift
+      ci-operator.openshift.io/cloud: hypershift-aws
+      ci-operator.openshift.io/cloud-cluster-profile: hypershift-aws
       ci.openshift.io/generator: prowgen
       pj-rehearse.openshift.io/can-be-rehearsed: "true"
     name: pull-ci-openshift-machine-config-operator-release-4.20-e2e-hypershift
@@ -2707,12 +2708,12 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-hypershift-techpreview
     decorate: true
     labels:
-      ci-operator.openshift.io/cloud: hypershift
-      ci-operator.openshift.io/cloud-cluster-profile: hypershift
+      ci-operator.openshift.io/cloud: hypershift-aws
+      ci-operator.openshift.io/cloud-cluster-profile: hypershift-aws
       ci.openshift.io/generator: prowgen
       pj-rehearse.openshift.io/can-be-rehearsed: "true"
     name: pull-ci-openshift-machine-config-operator-release-4.20-e2e-hypershift-techpreview
@@ -3002,7 +3003,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-metal-ovn-two-node-arbiter
     decorate: true
     labels:
@@ -3075,7 +3076,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-metal-ovn-two-node-fencing
     decorate: true
     labels:
@@ -3222,7 +3223,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-openstack-dualstack
     decorate: true
     labels:
@@ -3295,7 +3296,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-openstack-externallb
     decorate: true
     labels:
@@ -3368,12 +3369,12 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-openstack-hypershift
     decorate: true
     labels:
-      ci-operator.openshift.io/cloud: hypershift
-      ci-operator.openshift.io/cloud-cluster-profile: hypershift
+      ci-operator.openshift.io/cloud: hypershift-aws
+      ci-operator.openshift.io/cloud-cluster-profile: hypershift-aws
       ci.openshift.io/generator: prowgen
       pj-rehearse.openshift.io/can-be-rehearsed: "true"
     name: pull-ci-openshift-machine-config-operator-release-4.20-e2e-openstack-hypershift
@@ -3514,7 +3515,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-openstack-singlestackv6
     decorate: true
     labels:
@@ -3587,7 +3588,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-ovirt
     decorate: true
     labels:
@@ -3660,7 +3661,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/e2e-ovirt-upgrade
     decorate: true
     labels:
@@ -4171,7 +4172,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/images
     decorate: true
     labels:
@@ -4303,7 +4304,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/okd-scos-images
     decorate: true
     decoration_config:
@@ -4361,7 +4362,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/periodics-images
     decorate: true
     labels:
@@ -4417,7 +4418,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/security
     decorate: true
     labels:
@@ -4478,7 +4479,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/unit
     decorate: true
     labels:
@@ -4531,7 +4532,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/verify
     decorate: true
     labels:
@@ -4584,7 +4585,7 @@ presubmits:
     branches:
     - ^release-4\.20$
     - ^release-4\.20-
-    cluster: build08
+    cluster: build11
     context: ci/prow/verify-deps
     decorate: true
     labels:
