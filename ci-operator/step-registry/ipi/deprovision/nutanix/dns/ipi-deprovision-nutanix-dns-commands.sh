@@ -34,6 +34,11 @@ then
     fi
 fi
 
+if [[ ! -f "${SHARED_DIR}/hosted-zone.txt" ]]; then
+  echo "$(date -u --rfc-3339=seconds) - hosted-zone.txt not found, DNS records were not created, skipping..."
+  exit 0
+fi
+
 HOSTED_ZONE_ID="$(cat "${SHARED_DIR}/hosted-zone.txt")"
 
 id=$(aws route53 change-resource-record-sets --hosted-zone-id "${HOSTED_ZONE_ID}" --change-batch "file:///${SHARED_DIR}/dns-delete.json" --query '"ChangeInfo"."Id"' --output text)
